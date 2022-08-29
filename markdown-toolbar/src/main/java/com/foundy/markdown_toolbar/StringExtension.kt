@@ -15,7 +15,7 @@ internal fun String.wrapWith(str: String, start: Int, end: Int): String {
 /**
  * Returns the first index of this line that positions at [cursorPosition].
  *
- * The Result can be overflow the string length.
+ * The Result can be overflow the string length if it is empty.
  */
 internal fun String.firstIndexOfLine(cursorPosition: Int): Int {
     return substring(0, cursorPosition).lastIndexOf('\n') + 1
