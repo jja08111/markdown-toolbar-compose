@@ -1,7 +1,7 @@
 ext {
     PUBLISH_GROUP_ID = 'io.github.jja08111'
     PUBLISH_VERSION = '0.0.1'
-    PUBLISH_ARTIFACT_ID = 'markdowntoolbcomposearandroid'
+    PUBLISH_ARTIFACT_ID = 'markdown-toolbar-compose'
     PUBLISH_DESCRIPTION = 'Markdown Toolbar Compose on Android'
     PUBLISH_URL = 'https://github.com/jja08111/markdown-toolbar-compose'
     PUBLISH_LICENSE_NAME = 'MIT license'
