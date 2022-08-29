@@ -1,0 +1,15 @@
+ext {
+    PUBLISH_GROUP_ID = 'io.github.jja08111'
+    PUBLISH_VERSION = '0.0.1'
+    PUBLISH_ARTIFACT_ID = 'markdowntoolbcomposearandroid'
+    PUBLISH_DESCRIPTION = 'Markdown Toolbar Compose on Android'
+    PUBLISH_URL = 'https://github.com/jja08111/markdown-toolbar-compose'
+    PUBLISH_LICENSE_NAME = 'MIT license'
+    PUBLISH_LICENSE_URL = 'https://github.com/jja08111/markdown-toolbar-compose/blob/main/LICENSE'
+    PUBLISH_DEVELOPER_ID = 'jja08111'
+    PUBLISH_DEVELOPER_NAME = 'Minseong Kim'
+    PUBLISH_DEVELOPER_EMAIL = 'jja08111@gmail.com'
+    PUBLISH_SCM_CONNECTION = 'scm:git:github.com/jja08111/markdown-toolbar-compose.git'
+    PUBLISH_SCM_DEVELOPER_CONNECTION = 'scm:git:ssh://github.com:jja08111/markdown-toolbar-compose.git'
+    PUBLISH_SCM_URL = 'https://github.com/jja08111/markdown-toolbar-compose/tree/main'
+}
