@@ -4,6 +4,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+
 android {
     compileSdk 33
 
