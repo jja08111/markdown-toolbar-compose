@@ -1,14 +1,26 @@
 # Markdown Toolbar - Compose
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.jja08111/markdown-toolbar-compose/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.jja08111/markdown-toolbar-compose)
+
 It helps users write markdown tags easier.
 
 # Preview
 
 ![preview](/images/preview.gif)
 
+# Usage
+
+Add below code to the dependencies and sync the build gradle.
+
+```groovy
+dependencies {
+    implementation "io.github.jja08111:markdown-toolbar-compose:0.0.1"
+}
+```
+
 # Example
 
-Pass the `TextFieldValue` to the argument. You can customize icons by using the `iconBuilder`. 
+Pass the `TextFieldValue` to the argument. You can customize icons by using the `iconBuilder`.
 
 ```kotlin
 var textFieldValue by remember { mutableStateOf(TextFieldValue()) }
@@ -25,7 +37,7 @@ MarkdownToolBar(
 )
 ```
 
-# Tags
+# Supported Markdown Tags
 
 - Bold
 - Italic
@@ -37,6 +49,6 @@ MarkdownToolBar(
 - Code highlight
 - Code block
 
-# TODO 
+# TODO
 
 - Image
