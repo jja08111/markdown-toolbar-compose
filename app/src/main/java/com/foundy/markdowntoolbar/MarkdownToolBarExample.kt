@@ -43,12 +43,7 @@ fun MarkdownToolbarExample() {
             MarkdownToolBar(
                 value = textFieldValue,
                 onValueChange = { textFieldValue = it },
-                iconBuilder = { tag ->
-                    when (tag) {
-                        MarkdownTag.BOLD -> Icons.Default.FormatBold
-                        else -> null
-                    }
-                }
+                icons = mapOf(MarkdownTag.BOLD to Icons.Default.FormatBold),
             )
         }
     }

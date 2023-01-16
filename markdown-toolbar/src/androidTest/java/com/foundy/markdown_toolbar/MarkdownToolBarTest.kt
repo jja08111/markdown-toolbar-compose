@@ -43,7 +43,7 @@ class MarkdownToolBarTest {
     }
 
     @Test
-    fun shouldChangeIcon_WhenUsingIconBuilder() {
+    fun shouldChangeIcon_WhenUsingCustonIcons() {
         with(composeRule) {
             var textFieldValue by mutableStateOf(TextFieldValue())
             val newBoldIcon = Icons.Default.Air
@@ -52,12 +52,7 @@ class MarkdownToolBarTest {
                 MarkdownToolBar(
                     value = textFieldValue,
                     onValueChange = { textFieldValue = it },
-                    iconBuilder = { tag ->
-                        when(tag) {
-                            MarkdownTag.BOLD -> newBoldIcon
-                            else -> null
-                        }
-                    }
+                    icons = mapOf(MarkdownTag.BOLD to newBoldIcon)
                 )
             }
 

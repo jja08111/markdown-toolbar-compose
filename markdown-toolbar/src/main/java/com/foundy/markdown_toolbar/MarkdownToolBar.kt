@@ -22,13 +22,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-typealias MarkdownTagIconBuilder = ((MarkdownTag) -> ImageVector?)
-
 /**
  * Compose the [MarkdownToolBar] that helps users write markdown tags easier.
  *
- * @param iconBuilder Builds custom markdown icons. If a return value is null,
- * the [MarkdownTag.imageVector] will be used.
+ * @param icons Sets custom markdown icons. If it's null, the [MarkdownTag.imageVector] will be used.
  */
 @Composable
 fun MarkdownToolBar(
@@ -38,7 +35,7 @@ fun MarkdownToolBar(
     backgroundColor: Color = MaterialTheme.colorScheme.primaryContainer,
     iconTint: Color = MaterialTheme.colorScheme.onPrimaryContainer,
     iconPadding: Dp = 8.dp,
-    iconBuilder: MarkdownTagIconBuilder? = null
+    icons: Map<MarkdownTag, ImageVector>? = null,
 ) {
     Row(
         modifier
@@ -52,10 +49,11 @@ fun MarkdownToolBar(
                 tag = tag,
                 iconTint = iconTint,
                 iconPadding = iconPadding,
-                iconBuilder = iconBuilder
-            ) {
-                onValueChange(value.addMarkdownTag(tag))
-            }
+                imageVector = icons?.get(tag) ?: tag.imageVector,
+                onClick = {
+                    onValueChange(value.addMarkdownTag(tag))
+                }
+            )
         }
     }
 }
@@ -65,11 +63,9 @@ private fun MarkdownToolBarItemButton(
     tag: MarkdownTag,
     iconTint: Color,
     iconPadding: Dp,
-    iconBuilder: MarkdownTagIconBuilder?,
+    imageVector: ImageVector,
     onClick: () -> Unit
 ) {
-    val imageVector = remember { iconBuilder?.invoke(tag) ?: tag.imageVector }
-
     Icon(
         modifier = Modifier
             .clickable(onClick = onClick)
