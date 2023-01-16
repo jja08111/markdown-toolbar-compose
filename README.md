@@ -14,7 +14,7 @@ Add below code to the dependencies and sync the build gradle.
 
 ```groovy
 dependencies {
-    implementation "io.github.jja08111:markdown-toolbar-compose:0.0.1"
+    implementation "io.github.jja08111:markdown-toolbar-compose:0.1.0"
 }
 ```
 
