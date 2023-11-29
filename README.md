@@ -20,7 +20,7 @@ dependencies {
 
 # Example
 
-Pass the `TextFieldValue` to the argument. You can customize icons by using the `iconBuilder`.
+Pass the `TextFieldValue` to the argument. You can customize icons by using the `icons`.
 
 ```kotlin
 var textFieldValue by remember { mutableStateOf(TextFieldValue()) }
